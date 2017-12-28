@@ -1,0 +1,6 @@
+create table s_student(
+	 s_id  int primary key,
+	 s_name varchar(20),
+	 s_age  int ,
+     s_major varchar(20)
+);

@@ -1,0 +1,19 @@
+create table t_student (
+   t_id int    auto_increment,
+   t_number varchar(20) ,
+   t_name varchar(50),
+   t_sex varchar(2),
+   t_major varchar(10),
+   t_phone varchar(20),
+   t_hobby varchar(20),
+   t_desc varchar(100),
+   primary key (t_id,t_number)
+);
+
+create table m_manager(
+ m_id int auto_increment,
+ m_username varchar(10),
+ m_password varchar(20),
+  primary key (m_id,m_username)
+);
+
