@@ -12,7 +12,8 @@ public class HibernateTest {
 	public static void main(String[] args) {
 		//add();
 		//update();
-		delete() ;
+		//delete() ;
+		select();
 	}
 	
 	//增
@@ -65,8 +66,8 @@ public class HibernateTest {
 		SessionFactory sessionFactory=config.buildSessionFactory();
 		Session session=sessionFactory.openSession();
 		Transaction transaction=session.beginTransaction();
-		
-		
+		Student student=session.load(Student.class,2l);
+		System.out.println(student);
 		transaction.commit();
 		session.close();
 		sessionFactory.close();
