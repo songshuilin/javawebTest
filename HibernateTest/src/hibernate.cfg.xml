@@ -29,9 +29,7 @@
 					  DML 操纵语言  增删改查
 			注意: MYSQL在选择方言时,请选择最短的方言.
 		 -->
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		
-		
+		 <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<!-- #hibernate.show_sql true 
 			 #hibernate.format_sql true
 		-->

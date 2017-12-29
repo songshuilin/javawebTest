@@ -11,7 +11,8 @@ public class HibernateTest {
 
 	public static void main(String[] args) {
 		//add();
-		update();
+		//update();
+		delete() ;
 	}
 	
 	//增
@@ -21,7 +22,7 @@ public class HibernateTest {
 		SessionFactory sessionFactory=config.buildSessionFactory();
 		Session session=sessionFactory.openSession();
 		Transaction transaction=  session.beginTransaction();
-		Student student=new Student(1l,"zhangsan",23,"计算机");
+		Student student=new Student(3l,"wangwu",23,"Yinyu");
 		session.save(student);
 		transaction.commit();
 		session.close();
@@ -29,15 +30,46 @@ public class HibernateTest {
 	}
 	//改
 	public static void update(){
-		Configuration conf=new Configuration();
-		SessionFactory factory=conf.buildSessionFactory();
+		Configuration configuration=new Configuration();
+		Configuration config=configuration.configure();
+		SessionFactory factory=config.buildSessionFactory();
 		Session session=factory.openSession();
 		Transaction trans=session.beginTransaction();
 		Student student=session.get(Student.class,1l);
 		student.setS_age(22);
 		student.setS_name("songshuilin");
 		student.setS_major("通信工程");
+		session.save(student);
 		trans.commit();
 		session.close();
+		factory.close();
 	}
+	
+	public static void delete() {
+		Configuration configuration=new Configuration();
+		Configuration config=configuration.configure();
+		SessionFactory factory=config.buildSessionFactory();
+		Session session=factory.openSession();
+		Transaction trans=session.beginTransaction();
+		//Student student=session.load(Student.class,1l);
+		Student student=new Student(3l,"wangwu",24,"Yinyu");
+		session.delete(student);  
+		trans.commit();
+		session.close();
+		factory.close();
+	}
+	//查 
+	public static  void select() {
+		Configuration configuration=new Configuration();
+		Configuration config=configuration.configure();
+		SessionFactory sessionFactory=config.buildSessionFactory();
+		Session session=sessionFactory.openSession();
+		Transaction transaction=session.beginTransaction();
+		
+		
+		transaction.commit();
+		session.close();
+		sessionFactory.close();
+	}
+	
 }
