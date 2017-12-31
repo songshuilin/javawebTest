@@ -11,8 +11,8 @@
 <h1>登录界面</h1>
 ${msg}
 <form action="<c:url value='/LoginServlet?method=login'/>" method="post">
-用户名：<input type="text" name="username" value=""><br/>
-密    码：<input type="password" name="password" value=""><br/>
+用户名：<input type="text" name="username" value="zhangsan"><br/>
+密    码：<input type="password" name="password" value="123"><br/>
 <a href="<c:url value='/pages/regist.jsp'/>">没有账号，点击这里注册</a>
 <input type="submit" value="登录">
 <input type="reset" value="重置">

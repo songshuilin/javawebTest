@@ -10,10 +10,10 @@ public class Test {
 	public static void main(String[] args) {
 		StudentDao dao=new StudentDao();
 
-		for (int i = 0; i < 30; i++) {
+		for (int i = 100; i < 300; i++) {
 			Student student=new Student();
 			student.setDesc("我是学生"+i);
-			student.setHobby("i can encode "+i+" year");
+			student.setHobby("encode "+i+" year");
 			student.setMajor(i/2==0?"计算机专业":"英文专业");
 			student.setName("我的名字是"+i);
 			student.setPhone(i/2==0?"1234"+i:"9876"+i);
