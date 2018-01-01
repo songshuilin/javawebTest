@@ -22,17 +22,17 @@
 		</tr>
 		<c:forEach items="${requestScope.bean.list}" var="student">
 			<tr>
-				<td>${student.number}</td>
-				<td>${student.name}</td>
-				<td>${student.sex}</td>
-				<td>${student.major}</td>
-				<td>${student.phone}</td>
-				<td>${student.hobby}</td>
-				<td>${student.desc}</td>
+				<td>${student.t_number}</td>
+				<td>${student.t_name}</td>
+				<td>${student.t_sex}</td>
+				<td>${student.t_major}</td>
+				<td>${student.t_phone}</td>
+				<td>${student.t_hobby}</td>
+				<td>${student.t_desc}</td>
 				<td><a
-					href="<c:url value='/StudentServlet?method=find&number=${student.number}'/>">编辑</a>
+					href="<c:url value='/StudentServlet?method=find&number=${student.t_number}'/>">编辑</a>
 					<a
-					href="<c:url value='/StudentServlet?method=delete&number=${student.number}'/>">删除</a>
+					href="<c:url value='/StudentServlet?method=delete&number=${student.t_number}'/>">删除</a>
 				</td>
 			</tr>
 		</c:forEach>

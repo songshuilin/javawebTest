@@ -17,8 +17,8 @@ public class ManagerDao {
 		PreparedStatement state=null;
 		try {
 			state=conn.prepareStatement(sql);
-			state.setString(1, manager.getUseranme());
-			state.setString(2, manager.getPassword());
+			state.setString(1, manager.getM_username());
+			state.setString(2, manager.getM_password());
 			state.executeUpdate();
 		} catch (SQLException e) {
 			System.out.println(e.getStackTrace());
@@ -47,8 +47,8 @@ public class ManagerDao {
 		PreparedStatement state = null;
 		try {
 			state = conn.prepareStatement(sql);
-			state.setString(1, manager.getUseranme());
-			state.setString(2, manager.getPassword());
+			state.setString(1, manager.getM_username());
+			state.setString(2, manager.getM_password());
 			ResultSet result=state.executeQuery();
 			if (result.next()) {
 				System.out.println("false"+result);

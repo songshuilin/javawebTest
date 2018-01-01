@@ -1,62 +1,77 @@
 package com.snowfish.domain;
 
 public class Student {
-	String number;
-	String name;
-	String sex;
-	String major;
-	String phone;
-	String hobby;
-	String desc;
-	
-	public String getNumber() {
-		return number;
+	String t_number;
+	String t_name;
+	String t_sex;
+	String t_major;
+	String t_phone;
+	String t_hobby;
+	String t_desc;
+	public String getT_number() {
+		return t_number;
 	}
-	public void setNumber(String number) {
-		this.number = number;
+	public void setT_number(String t_number) {
+		this.t_number = t_number;
 	}
-
-	public String getName() {
-		return name;
+	public String getT_name() {
+		return t_name;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setT_name(String t_name) {
+		this.t_name = t_name;
 	}
-	public String getSex() {
-		return sex;
+	public String getT_sex() {
+		return t_sex;
 	}
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setT_sex(String t_sex) {
+		this.t_sex = t_sex;
 	}
-	public String getMajor() {
-		return major;
+	public String getT_major() {
+		return t_major;
 	}
-	public void setMajor(String major) {
-		this.major = major;
+	public void setT_major(String t_major) {
+		this.t_major = t_major;
 	}
-	public String getPhone() {
-		return phone;
+	public String getT_phone() {
+		return t_phone;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setT_phone(String t_phone) {
+		this.t_phone = t_phone;
 	}
-	public String getHobby() {
-		return hobby;
+	public String getT_hobby() {
+		return t_hobby;
 	}
-	public void setHobby(String hobby) {
-		this.hobby = hobby;
+	public void setT_hobby(String t_hobby) {
+		this.t_hobby = t_hobby;
 	}
-	public String getDesc() {
-		return desc;
+	public String getT_desc() {
+		return t_desc;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setT_desc(String t_desc) {
+		this.t_desc = t_desc;
+	}
+	public Student(String t_number, String t_name, String t_sex, String t_major, String t_phone, String t_hobby,
+			String t_desc) {
+		super();
+		this.t_number = t_number;
+		this.t_name = t_name;
+		this.t_sex = t_sex;
+		this.t_major = t_major;
+		this.t_phone = t_phone;
+		this.t_hobby = t_hobby;
+		this.t_desc = t_desc;
+	}
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
-		return "Student [ number=" + number + ", name=" + name + ", sex=" + sex + ", major=" + major
-				+ ", phone=" + phone + ", hobby=" + hobby + ", desc=" + desc + "]";
+		return "Student [t_number=" + t_number + ", t_name=" + t_name + ", t_sex=" + t_sex + ", t_major=" + t_major
+				+ ", t_phone=" + t_phone + ", t_hobby=" + t_hobby + ", t_desc=" + t_desc + "]";
 	}
+	
+	
 
 
 }

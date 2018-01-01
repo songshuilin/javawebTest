@@ -1,33 +1,35 @@
 package com.snowfish.domain;
 
 public class Manager {
- String useranme;
- String password;
- 
-public Manager() {
-	super();
-	// TODO Auto-generated constructor stub
-}
-public Manager(String useranme, String password) {
-	super();
-	this.useranme = useranme;
-	this.password = password;
-}
-public String getUseranme() {
-	return useranme;
-}
-public void setUseranme(String useranme) {
-	this.useranme = useranme;
-}
-public String getPassword() {
-	return password;
-}
-public void setPassword(String password) {
-	this.password = password;
-}
-@Override
-public String toString() {
-	return "Manager [useranme=" + useranme + ", password=" + password + "]";
-}
- 
+	String m_username;
+	String m_password;
+
+	public Manager() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Manager(String m_username, String m_password) {
+		super();
+		this.m_username = m_username;
+		this.m_password = m_password;
+	}
+
+	public String getM_username() {
+		return m_username;
+	}
+
+	public void setM_username(String m_username) {
+		this.m_username = m_username;
+	}
+
+	public String getM_password() {
+		return m_password;
+	}
+
+	public void setM_password(String m_password) {
+		this.m_password = m_password;
+	}
+
+
 }

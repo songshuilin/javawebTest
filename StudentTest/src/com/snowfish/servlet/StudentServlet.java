@@ -33,13 +33,13 @@ public class StudentServlet extends BaseServlet{
 		
 		
 		Student student=new Student();
-		student.setDesc(desc);
-		student.setHobby(hobby);
-		student.setMajor(major);
-		student.setName(name);
-		student.setNumber(number);
-		student.setSex(sex);
-		student.setPhone(phone);
+		student.setT_desc(desc);
+		student.setT_hobby(hobby);
+		student.setT_major(major);
+		student.setT_name(name);
+		student.setT_number(number);
+		student.setT_sex(sex);
+		student.setT_phone(phone);
 		service.edit(student);
 		request.setAttribute("msg", "edit 成功！");
 		return "f:/msg.jsp";

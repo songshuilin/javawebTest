@@ -22,13 +22,13 @@ public class StudentDao {
 			ResultSet result=preparedStatement.executeQuery();
 			while(result.next()) {
 				Student student=new Student();
-				student.setDesc(result.getString("t_desc"));
-				student.setHobby(result.getString("t_hobby"));
-				student.setMajor(result.getString("t_major"));
-				student.setName(result.getString("t_name"));
-				student.setNumber(result.getString("t_number"));
-				student.setSex(result.getString("t_sex"));
-				student.setPhone(result.getString("t_phone"));
+				student.setT_desc(result.getString("t_desc"));
+				student.setT_hobby(result.getString("t_hobby"));
+				student.setT_major(result.getString("t_major"));
+				student.setT_name(result.getString("t_name"));
+				student.setT_number(result.getString("t_number"));
+				student.setT_sex(result.getString("t_sex"));
+				student.setT_phone(result.getString("t_phone"));
 				list_student.add(student);   	
 			}
 
@@ -46,13 +46,13 @@ public class StudentDao {
 		System.out.println(sql);
 		try {
 			PreparedStatement preparedStatement=conn.prepareStatement(sql);
-			preparedStatement.setString(1, student.getDesc());
-			preparedStatement.setString(2, student.getHobby());
-			preparedStatement.setString(3, student.getMajor());
-			preparedStatement.setString(4, student.getName());
-			preparedStatement.setString(5, student.getNumber());
-			preparedStatement.setString(6, student.getSex());
-			preparedStatement.setString(7, student.getPhone());
+			preparedStatement.setString(1, student.getT_desc());
+			preparedStatement.setString(2, student.getT_hobby());
+			preparedStatement.setString(3, student.getT_major());
+			preparedStatement.setString(4, student.getT_name());
+			preparedStatement.setString(5, student.getT_number());
+			preparedStatement.setString(6, student.getT_sex());
+			preparedStatement.setString(7, student.getT_phone());
 			preparedStatement.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -70,13 +70,13 @@ public class StudentDao {
 			Student student=null;
 			while(result.next()) {
 				student=new Student();
-				student.setDesc(result.getString("t_desc"));
-				student.setHobby(result.getString("t_hobby"));
-				student.setMajor(result.getString("t_major"));
-				student.setName(result.getString("t_name"));
-				student.setNumber(result.getString("t_number"));
-				student.setSex(result.getString("t_sex"));
-				student.setPhone(result.getString("t_phone"));
+				student.setT_desc(result.getString("t_desc"));
+				student.setT_hobby(result.getString("t_hobby"));
+				student.setT_major(result.getString("t_major"));
+				student.setT_name(result.getString("t_name"));
+				student.setT_number(result.getString("t_number"));
+				student.setT_sex(result.getString("t_sex"));
+				student.setT_phone(result.getString("t_phone"));
 			}
 			return student;	
 		} catch (SQLException e) {
@@ -96,13 +96,13 @@ public class StudentDao {
 		PreparedStatement preparedStatement=null;
 		try {
 			preparedStatement = conn.prepareStatement(sql);
-			preparedStatement.setString(1, student.getDesc());
-			preparedStatement.setString(2, student.getHobby());
-			preparedStatement.setString(3, student.getMajor());
-			preparedStatement.setString(4, student.getName());
-			preparedStatement.setString(5, student.getSex());
-			preparedStatement.setString(6, student.getPhone());
-			preparedStatement.setString(7, student.getNumber());
+			preparedStatement.setString(1, student.getT_desc());
+			preparedStatement.setString(2, student.getT_hobby());
+			preparedStatement.setString(3, student.getT_major());
+			preparedStatement.setString(4, student.getT_name());
+			preparedStatement.setString(5, student.getT_sex());
+			preparedStatement.setString(6, student.getT_phone());
+			preparedStatement.setString(7, student.getT_number());
 			preparedStatement.executeUpdate();
 
 		} catch (SQLException e) {
@@ -148,13 +148,13 @@ public class StudentDao {
 			set=preparedStatement.executeQuery();
 			while(set.next()) {
 				Student student=new Student();
-				student.setDesc(set.getString("t_desc"));
-				student.setHobby(set.getString("t_hobby"));
-				student.setMajor(set.getString("t_major"));
-				student.setName(set.getString("t_name"));
-				student.setNumber(set.getString("t_number"));
-				student.setSex(set.getString("t_sex"));
-				student.setPhone(set.getString("t_phone"));
+				student.setT_desc(set.getString("t_desc"));
+				student.setT_hobby(set.getString("t_hobby"));
+				student.setT_major(set.getString("t_major"));
+				student.setT_name(set.getString("t_name"));
+				student.setT_number(set.getString("t_number"));
+				student.setT_sex(set.getString("t_sex"));
+				student.setT_phone(set.getString("t_phone"));
 				list.add(student);		
 			}
 			System.out.println(list);
